@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=exercise-2
+ProjectName            :=exercise-3
 ConfigurationName      :=Debug
 WorkspacePath          :=D:/development/c-programming/c-sandbox
-ProjectPath            :=D:/development/c-programming/c-sandbox/exercise-2
+ProjectPath            :=D:/development/c-programming/c-sandbox/exercise-3
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E 
-ObjectsFileList        :="exercise-2.txt"
+ObjectsFileList        :="exercise-3.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := 
@@ -62,7 +62,7 @@ AS       := $(CodeLiteDir)/tools/gcc/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\cseapp\CodeLite
-Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/up_exercises_secondtask.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IntermediateDirectory)/bitops.c$(ObjectSuffix) 
 
 
 
@@ -94,14 +94,14 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/main.c$(ObjectSuffix): main.c 
-	$(CC) $(SourceSwitch) "D:/development/c-programming/c-sandbox/exercise-2/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "D:/development/c-programming/c-sandbox/exercise-3/main.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.c$(PreprocessSuffix): main.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.c$(PreprocessSuffix) main.c
 
-$(IntermediateDirectory)/up_exercises_secondtask.c$(ObjectSuffix): ../exercises/secondtask.c 
-	$(CC) $(SourceSwitch) "D:/development/c-programming/c-sandbox/exercises/secondtask.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/up_exercises_secondtask.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/up_exercises_secondtask.c$(PreprocessSuffix): ../exercises/secondtask.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/up_exercises_secondtask.c$(PreprocessSuffix) ../exercises/secondtask.c
+$(IntermediateDirectory)/bitops.c$(ObjectSuffix): bitops.c 
+	$(CC) $(SourceSwitch) "D:/development/c-programming/c-sandbox/exercise-3/bitops.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/bitops.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/bitops.c$(PreprocessSuffix): bitops.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/bitops.c$(PreprocessSuffix) bitops.c
 
 ##
 ## Clean
